@@ -13019,17 +13019,7 @@ var Player = function (_Component) {
    */
 
 
-  Player.prototype.defaultPlaybackRate = function defaultPlaybackRate(rate) {
-    if (rate !== undefined) {
-      return this.techCall_('setDefaultPlaybackRate', rate);
-    }
-
-    if (this.tech_ && this.tech_.featuresPlaybackRate) {
-      return this.techGet_('defaultPlaybackRate');
-    }
-    return 1.0;
-  };
-
+  Player.prototype.defaultPlaybackRate = false;
   /**
    * Gets or sets the audio flag
    *
