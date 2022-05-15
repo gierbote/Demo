@@ -13000,16 +13000,7 @@ var Player = function (_Component) {
    */
 
 
-  Player.prototype.playbackRate = function playbackRate(rate) {
-    if (rate !== undefined) {
-      return;
-    }
-
-    if (this.tech_ && this.tech_.featuresPlaybackRate) {
-      return this.techGet_('playbackRate');
-    }
-    return 1.0;
-  };
+  Player.prototype.playbackRate = false;
 
   /**
    * Gets or sets the current default playback rate. A default playback rate of
